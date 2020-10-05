@@ -1,0 +1,47 @@
+
+public class Tarea1Listas {
+
+        Nodo Head = null;
+        
+        public class Nodo{
+            int Dato;
+            Nodo Pri;
+            Nodo Seg;
+            Nodo Ter;
+             
+            public Nodo(int Num)
+            {            
+                Dato = Num;
+                this.Pri = null;
+                this.Seg = null;
+                this.Ter = null;                
+            }
+            
+            public Nodo(int Num, Nodo Prim, Nodo Seg, Nodo Ter)
+            {            
+                Dato = Num;
+                this.Pri = Prim;
+                this.Seg = Seg;
+                this.Ter = Ter;
+            }
+        }
+            
+        public void generar(){                
+            Nodo Nodo99 = new Nodo(99);
+            Nodo Nodo67= new Nodo(67, null, Nodo99, null);
+            Nodo Nodo57= new Nodo(57);
+            Nodo Nodo19= new Nodo(19, null, null, Nodo67);
+            Nodo Nodo23= new Nodo(23, null, Nodo57, null);
+            Nodo Nodo20= new Nodo(20, Nodo23, Nodo19, null);
+            Head = Nodo20;            
+        }
+
+    public static void main(String[] args) {
+        Tarea1Listas Lista = new Tarea1Listas();
+        Lista.generar();        
+        System.out.println("Primer Número:\t"+Lista.Head.Seg.Ter.Seg.Dato);
+        System.out.println("Segundo Número:\t"+Lista.Head.Pri.Seg.Dato);
+    }
+}
+
+
