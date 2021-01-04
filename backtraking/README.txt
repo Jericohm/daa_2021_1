@@ -1,0 +1,1 @@
+La complejidad del laberinto es de aproximadamente 10,000 asignaciones y comparaciones.
